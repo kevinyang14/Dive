@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *photo;
 @property (weak, nonatomic) IBOutlet UILabel *title;
-@property (weak, nonatomic) IBOutlet UILabel *numViewsAndBroadcasterName;
+@property (weak, nonatomic) IBOutlet UILabel *broadcasterName;
+@property (weak, nonatomic) IBOutlet UILabel *viewers;
 @end

@@ -45,14 +45,14 @@ static NSString *VERSION_NUM = @"v1";
                                                              bundle: nil];
     PFUser *currentUser = [PFUser currentUser];
     
-//    if(currentUser) {
+    if(currentUser) {
         NSLog(@"logged in user: %@ %@", currentUser[@"firstName"], currentUser[@"lastName"]);
         DiveFeedTVC *diveFeedView = (DiveFeedTVC *)[mainStoryboard instantiateViewControllerWithIdentifier:@"DiveFeedTVC"];
         self.window.rootViewController = diveFeedView;
-//    } else {
-//        WelcomeVC *welcomeView = (WelcomeVC *)[mainStoryboard instantiateViewControllerWithIdentifier:@"WelcomeVC"];
-//        self.window.rootViewController = welcomeView;
-//    }
+    } else {
+        WelcomeVC *welcomeView = (WelcomeVC *)[mainStoryboard instantiateViewControllerWithIdentifier:@"WelcomeVC"];
+        self.window.rootViewController = welcomeView;
+    }
 }
 
 

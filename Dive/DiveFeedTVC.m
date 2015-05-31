@@ -173,7 +173,8 @@
         NSString *userName = [NSString stringWithFormat:@"%@ %@", user[@"firstName"], user[@"lastName"]];
         int numViewers = [liveStream[@"numViewers"] intValue];
         cell.title.text = liveStream[@"streamName"];
-        cell.numViewsAndBroadcasterName.text =[NSString stringWithFormat:@"by %@ ・ %d viewers",userName, numViewers];
+        cell.broadcasterName.text =[NSString stringWithFormat:@"%@",userName];
+        cell.viewers.text =[NSString stringWithFormat:@"😎%d",numViewers];
     }];
 //    cell.timeLabel.text = [self getTimeDifferenceFromDatePosted:[post createdAt]];
 }
